@@ -6,7 +6,9 @@ from rest_framework import viewsets,generics,status
 from .serializers import *
 from .models import * 
 
-
+def index(request):
+	return render(request,"index.html")
+	
 class BranchDetails(APIView):
 	
 	def get(self,request,*args,**kwargs):
